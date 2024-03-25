@@ -1,0 +1,233 @@
+.cabecalho__menu-hamburguer {
+    width: 30px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin: 1em;
+}
+
+.logo__botao:checked~.cabecalho__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url("../assets/Menu\ Aberto.svg");
+}
+
+.logo__botao:checked~.cabecalho__rotulo {
+    background: var(--azul-secundario);
+}
+
+.cabecalho {
+    background-color: var(--branco-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+}
+
+.imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.logo__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco-fundo);
+}
+
+.lista-menu__titulo {
+    color: var(--amarelo-botao);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-secundario);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.menu__item {
+    text-decoration: none;
+    margin: 0 .2em;
+}
+
+.item3 {
+    margin-right: .5em;
+}
+
+.logo__botao {
+    display: none;
+}
+
+.menu__titulo-responsivo {
+    display: none;
+}
+
+.menu__itens-responsivo {
+    display: none;
+}
+
+.menu__texto {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .cabecalho__menu {
+        padding: 1em;
+    }
+
+    .menu__titulo-responsivo,
+    .titulo__responsivo-negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .menu__titulo-responsivo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .titulo__responsivo-negrito {
+        font-weight: 700;
+    }
+
+    .menu__itens-responsivo {
+        display: flex;
+    }
+
+    .lista-menu {
+        top:77%;
+    }
+
+    .lista__link-responsivo {
+        text-decoration: none;
+        color: var(--preto-texto);
+    }
+
+    .item1 {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .menu-responsivo {
+        display: none;
+    }
+
+    .menu-responsivo:checked~ .lista-menu {
+        display: block;
+        width: auto;
+        left: auto;
+    }
+
+    .opções__botão {
+        display: none;
+    }
+
+    .menu__rotulo-responsivo {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-responsivo:checked~ .menu__rotulo-responsivo {
+        background: var(--azul-secundario);
+        color: var(--branco-fundo);
+    }
+
+    .lista__item-responsivo {
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 1em;
+        margin: 0 .5em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-secundario);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco-fundo);
+        text-decoration: none;
+    }
+
+    .cabecalho__icones {
+        padding: 1em;
+    }
+
+    .menu__item {
+        margin: 0 .7em;
+    }
+
+    .item3 {
+        margin-right: .5em;
+    }
+
+    .menu__texto {
+        font-weight: 400;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    .cabecalho__icones{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto-texto);
+    }
+
+    .cabecalho {
+        padding: 0 1em;
+    }
+
+    .menu__itens-responsivo {
+        margin-right: auto;
+    }
+
+    .menu__texto {
+        display: block;
+        margin: 0 2em 0 0;
+    }
+
+    .texto2 {
+        margin: 0 2em 0 0.5em;
+    }
+
+    .menu__titulo-responsivo {
+        margin: 0 1em 0 0;
+    }
+
+    .menu__texto:hover {
+        cursor: pointer;
+    }
+
+    .lista__link-responsivo:hover{
+        color: var(--amarelo-botao);
+    }
+
+    .responsivo1:hover {
+        cursor: pointer;
+    }
+
+}
